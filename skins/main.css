@@ -43,6 +43,10 @@ ul.navbar-nav>li.dropdown>div.dropdown-menu>a.dropdown-item {
     line-height: 2em;
 }
 
+.hidden {
+    visibility: hidden;
+}
+
 /*Legacy*/
 
 header {
