@@ -15,12 +15,32 @@ ul.navbar-nav {
 ul.navbar-nav>li {
     width: 25%;
     float: left;
-    line-height: 83px;
+    line-height: 96px;
     font-size: x-large;
+}
+
+ul.navbar-nav a {
+    padding: 0;
+    color: #101010;
+    text-decoration: none;
+}
+
+ul.navbar-nav>li.dropdown>div.dropdown-menu {
+    margin: 0;
 }
 
 ul.navbar-nav>li.dropdown:hover>div.dropdown-menu {
     display: block;
+    border-color: black;
+    padding: 0;
+    border-top: none;
+    border-radius: 0px 0px 3% 3%;
+}
+
+ul.navbar-nav>li.dropdown>div.dropdown-menu>a.dropdown-item {
+    text-align: center;
+    height: 2em;
+    line-height: 2em;
 }
 
 /*Legacy*/
