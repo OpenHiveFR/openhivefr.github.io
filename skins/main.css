@@ -47,8 +47,6 @@ ul.navbar-nav>li.dropdown>div.dropdown-menu>a.dropdown-item {
     visibility: hidden;
 }
 
-/*Legacy*/
-
 header {
     width: 100%;
     height: 96px;
@@ -77,34 +75,41 @@ nav {
     height: 100%;
 }
 
-.menu>li {
-    float: left;
-    width: 25%;
-    height: 100%;
-    line-height: 96px;
+main {
+    width: 80%;
+    border: outset blue 1px;
+    border-radius: 10px 10px 10px 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+main>section>p {
+    text-indent: 2em;
+}
+
+main>section>h2::before {
+    content: "►";
+}
+
+footer {
+    border-top: outset blue 1px;
+    color: gray;
+    background-color: #ffcc00;
     text-align: center;
-    font-size: x-large;
 }
 
-.innerMenu {
-    list-style: none;
-    padding-left: 0;
+footer>p {
     margin: 0;
-    display: none;
 }
 
-.menu>li:hover>.innerMenu {
-    display: block;
+footer>p>a {
+    color: gray;
 }
 
-.innerMenu>li {
-    height: 33.5px;
-    line-height: 33.5px;
-}
-
-.innerMenu>li>a {
-    height: 100%;
-    width: 100%;
-    padding: 5px;
-    display: block;
+footer>p>a:hover {
+    color: gray;
+    text-decoration: dashed;
 }
