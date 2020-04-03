@@ -1,0 +1,24 @@
+.presentation::before {
+    content: 'Présentation : ';
+    font-weight: bold;
+}
+
+.status::before {
+    content: 'Statut actuel : ';
+    font-weight: bold;
+}
+
+.doc::before {
+    content: 'Documentation : ';
+    font-weight: bold;
+}
+
+.get::before {
+    content: 'Obtention et/ou Utilisation : ';
+    font-weight: bold;
+}
+
+.next::before {
+    content: 'Suite : ';
+    font-weight: bold;
+}

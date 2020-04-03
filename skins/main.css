@@ -55,11 +55,15 @@ header {
     color: #101010
 }
 
-header>img {
+header>a>img {
+    
+    object-fit: contain;
+}
+
+header>a {
+    float: left;
     width: 25%;
     height: 100%;
-    float: left;
-    object-fit: contain;
 }
 
 nav {
