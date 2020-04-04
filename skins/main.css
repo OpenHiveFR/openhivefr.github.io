@@ -4,7 +4,13 @@
 
 body {
     margin:0;
-    min-height: 1vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
 
 ul.navbar-nav {
@@ -56,15 +62,20 @@ header {
     color: #101010
 }
 
-header>a>img {
-    
-    object-fit: contain;
-}
-
 header>a {
     float: left;
     width: 25%;
     height: 100%;
+}
+
+header>a>picture {
+    height:100%;
+    display: flex;
+}
+
+header>a>picture>img {
+    
+    object-fit: contain;
 }
 
 nav {
@@ -117,4 +128,19 @@ footer>p>a {
 footer>p>a:hover {
     color: gray;
     text-decoration: dashed;
+}
+
+.img-fluid {
+    margin: auto;
+}
+  
+
+@media (orientation: portrait), (max-width: 1000px) {
+    header>a {
+        width: 90px;
+    }
+
+    header>nav {
+        width: calc(calc(100%) - 90px);
+    }
 }
