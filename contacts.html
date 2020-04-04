@@ -4,11 +4,17 @@
         <title>OpenHive - Acueil</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="skins/main.css"/>
+        <link rel="stylesheet" href="skins/contacts.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     </head>
     <body>
         <header>
-            <a href="https://openhivefr.github.io"><img src="images/logos/openhive_logo_only.png" alt="Logo OpenHive"></a>
+            <a href="https://openhivefr.github.io">
+                <picture>
+                    <source media="(orientation: landscape) and (min-width: 1000px)" srcset="images/logos/openhive_logo_only.png"/>
+                    <source media="(orientation: portrait), (max-width: 1000px)"  srcset="images/logos/openhive_logo_minimal.png"/>
+                    <img src="images/logos/openhive_logo_only.png" alt="Logo OpenHive" class="img-fluid"/>
+                </picture></a>
             <nav class="dropdown">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item dropdown">
@@ -32,7 +38,7 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="#"" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link" href="#" aria-haspopup="true" aria-expanded="false">
                             Blogs
                         </a>
                         <div class="dropdown-menu">
@@ -41,12 +47,12 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link" href="https://openhivefr.github.io/contacts.html" aria-haspopup="true" aria-expanded="false">
                             Contacts
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Nous rejoindre</a>
-                            <a class="dropdown-item" href="#">Membres</a>
+                            <a class="dropdown-item" href="https://openhivefr.github.io/contacts.html#join">Nous rejoindre</a>
+                            <a class="dropdown-item" href="https://openhivefr.github.io/contacts.html#members">Membres</a>
                         </div>
                     </li>
                 </ul>
@@ -59,16 +65,40 @@
                 <h2>Comment nous rejoindre ?</h2>
                 <section id="join-use">
                     <h3>Je veux seulement utiliser un sous-projet OpenHive.</h3>
-                    <p>Dans la plupart des cas, aucune démarche de type inscription n'est requise pour bénéficier d'un sous-projet OpenHive.
+                    <p>Dans la plupart des cas, aucune démarche de type inscription n'est requise pour bénéficier d'un sous-projet OpenHive. Ils sont libres.
                         <br/>Pour plus d'informations, une <a href="https://openhivefr.github.io/projects.html">page regroupant les sous-projets</a> est présente et détaille les différentes manières de bénéficier de chaque sous-projet.</p>
                     <hr/>
-                    <h3>Je veux participer à un sous-projet, ou au projet OpenHive au sens large</h3>
-                    <p></p>
+                    <h3>Je veux participer à un sous-projet, ou au projet OpenHive au sens large.</h3>
+                    <p>Pour le moment, aucune structure n'a été mise en place pour automatiser l'intégration de nouveaux membres. Si vous voulez nous rejoindre, quelque soient vos possibilités et domaines de contribution, vous pouvez pour le moment nous envoyer un mail à l'adresse <a href="mailto:openhivefr@gmail.com">mail d'OpenHive</a>. Nous reviendrons vers vous le plus vite possible !</p>
                 </section>
             </section>
             <hr/>
             <section id="members">
-                <h2></h2>
+                <h2>Membres</h2>
+                <section id="adminTeam" class="team">
+                    <h3>Équipe d'administration</h3>
+                    <section class="team-members">
+                        <div class="member" id="member-helldragger">
+                            <h4>Helldragger</h4>
+                            <img class="img-fluid"/>
+                            <p class="name">N/A</p>
+                            <p class="discord">N/A</p>
+                            <p class="mail">N/A</p>
+                            <p class="site">N/A</p>
+                            <p class="github">N/A</p>
+                        </div>
+
+                        <div class="member" id="member-paoderdoktor">
+                            <h4>PaoDerDoktor</h4>
+                            <img class="img-fluid" src="images/avatars/pao.png"/>
+                            <p class="name">Benjamin Castel</p>
+                            <p class="discord">N/A</p>
+                            <p class="mail"><a href="mailto:paoderdoktor@gmail.com">paoderdoktor@gmail.com</a></p>
+                            <p class="site"><a href="https://paoderdoktor.github.io">paoderdoktor.github.io</a></p>
+                            <p class="github"><a href="https://github.com/paoderdoktor">PaoDerDoktor</a></p>
+                        </div>
+                    </section>
+                </section>
             </section>
         </main>
 

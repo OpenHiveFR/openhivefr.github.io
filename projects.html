@@ -10,11 +10,16 @@
 
     <body>
         <header>
-            <a href="https://openhivefr.github.io"><img src="images/logos/openhive_logo_only.png" alt="Logo OpenHive"></a>
+            <a href="https://openhivefr.github.io">
+                <picture>
+                    <source media="(orientation: landscape) and (min-width: 1000px)" srcset="images/logos/openhive_logo_only.png"/>
+                    <source media="(orientation: portrait), (max-width: 1000px)"  srcset="images/logos/openhive_logo_minimal.png"/>
+                    <img src="images/logos/openhive_logo_only.png" alt="Logo OpenHive" class="img-fluid"/>
+                </picture></a>
             <nav class="dropdown">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link" href="https://openhivefr.github.io/projects" aria-haspopup="true" aria-expanded="false">
                             Projets
                         </a>
                         <div class="dropdown-menu">
@@ -34,7 +39,8 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="#"" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link" href="#" aria-haspopup="true" aria-expanded="false">
+                            
                             Blogs
                         </a>
                         <div class="dropdown-menu">
@@ -43,12 +49,12 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link" href="https://openhivefr.github.io/contacts.html" aria-haspopup="true" aria-expanded="false">
                             Contacts
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Nous rejoindre</a>
-                            <a class="dropdown-item" href="#">Membres</a>
+                            <a class="dropdown-item" href="https://openhivefr.github.io/contacts.html#join">Nous rejoindre</a>
+                            <a class="dropdown-item" href="https://openhivefr.github.io/contacts.html#members">Membres</a>
                         </div>
                     </li>
                 </ul>

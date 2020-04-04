@@ -1,0 +1,62 @@
+section.team-members {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+div.member {
+    display: flex;
+    flex-direction: column;
+    border: solid blue 1px;
+    border-radius: 15px 15px 15px 15px;
+    padding: 5px;
+    width: 300px;
+}
+
+div.member>h4 {
+    text-align: center;
+}
+
+div.member>img {
+    max-width: 80%;
+    height: auto;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+p.name::before {
+    content: "Nom : ";
+    font-weight: bold;
+}
+
+p.discord::before {
+    content: "Discord : ";
+    font-weight: bold;
+}
+
+p.mail::before {
+    content: "E-Mail : ";
+    font-weight: bold;
+}
+
+p.site::before {
+    content: "Site perso : ";
+    font-weight: bold;
+}
+
+p.github::before {
+    content: "Github : ";
+    font-weight: bold;
+}
+
+@media (max-width: 800px), (orientation: portrait) {
+    section.team-members {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div.member {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+}
