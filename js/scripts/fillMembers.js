@@ -103,7 +103,7 @@ function createTeam(team) {
 let members = {};
 
 let xmlhttp = new XMLHttpRequest();
-xmlhttp.open("GET", "https://openhivefr.github.io/js/jsons/members.json", true);
+xmlhttp.open("GET", "https://openhivefr.github.io/js/jsons/members.json", false);
 xmlhttp.onreadystatechange = function () {
     if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
       members = JSON.parse(xmlhttp.responseText);
