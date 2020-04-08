@@ -1,0 +1,19 @@
+button#bttButton {
+    display: none;
+
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+
+    border: outset blue 1px;
+    outline: none;
+    background-color: #ffcc00;
+    color: blue;
+
+    cursor: pointer;
+
+    border-radius: 5px 5px 5px 5px;
+
+    font-size: xx-large;
+}

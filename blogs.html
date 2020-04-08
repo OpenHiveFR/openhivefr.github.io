@@ -4,6 +4,7 @@
         <title>OpenHive - Blogs</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="skins/main.css"/>
+        <link rel="stylesheet" href="skins/blogs.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     </head>
     <body>
@@ -21,28 +22,28 @@
                             Projets
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="https://openhivefr.github.io/projects#discordUnicaen">Serveur Discord</a>
-                            <a class="dropdown-item" href="https://openhivefr.github.io/projects#openhivefrsite">Site OpenHive</a>
-                            <a class="dropdown-item" href="https://openhivefr.github.io/projects#rayborn">RayBorn</a>
+                            <a class="dropdown-item" href="https://openhivefr.github.io/projects.html#discordUnicaen">Serveur Discord</a>
+                            <a class="dropdown-item" href="https://openhivefr.github.io/projects.html#openhivefrsite">Site OpenHive</a>
+                            <a class="dropdown-item" href="https://openhivefr.github.io/projects.html#rayborn">RayBorn</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link" href="https://openhivefr.github.com/ressources.html#" aria-haspopup="true" aria-expanded="false">
                             Ressources
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Cours & tutos</a>
-                            <a class="dropdown-item" href="#">Exercices</a>
-                            <a class="dropdown-item" href="#">Logiciels</a>
+                            <a class="dropdown-item" href="https://openhivefr.github.com/ressources.html#">Cours & tutos</a>
+                            <a class="dropdown-item" href="https://openhivefr.github.com/ressources.html#">Exercices</a>
+                            <a class="dropdown-item" href="https://openhivefr.github.com/ressources.html#">Logiciels</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link" href="https://openhivefr.github.com/blogs.html" aria-haspopup="true" aria-expanded="false">
                             Blogs
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Devlogs</a>
-                            <a class="dropdown-item" href="#">News</a>
+                            <a class="dropdown-item" href="https://openhivefr.github.com/blogs.html#devlogs">Devlogs</a>
+                            <a class="dropdown-item" href="https://openhivefr.github.com/blogs.html#news">News</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -60,10 +61,32 @@
         </header>
 
         <main>
-            <section>
-                <h2></h2>
+            <section id="intro">
+                <h2>Blogs</h2>
+                <p>Ici se trouveront les news et devlogs d'OpenHive !</p>
+            </section>
+            <hr/>
+            <section id="devlogs">
+                <h2>Devlogs</h2>
+                <article>
+                    <h3>Finition de la première version minimale du site</h3>
+                    <p>Bonjour à tous ! Nous sommes le 8 avril 2020, et aujourd'hui on peut le dire : On a bel et bien fini la version minimale du site !</p>
+                    <p>Ce fut laborieux (à cause de lalimitation de github pages imposant des pages statiques), mais le site est prêt à être complété (de notre côté, beaucoup de tâches ont étés un peu plus automatisées. Plus besoin d'écrire des pavés en HTML notamment !)</p>
+                    <p>On va essayer de vous donner le plus rapidement possible accès à des cours et autres ressources. Pour le moment, on réfléchit encore à comment mettre le tout en place (toujours les souci des github pages qui s'éloignent un peu de notre manière habituel de mener des projets de ce genre) mais sachez que tout est en train de se faire !</p>
+                    <p class="eding">À très bientôt en tout cas, portez vous bien !</p>
+                    <p class="signature">L'équipe OpenHive</p>
+                </article>
+            </section>
+            <hr/>
+            <section id="news">
+                <h2>News</h2>
+                <p><span class="date">8 Avril 2020 -- 23h40 : </span>Le site est en ligne en version minimale !</p>            
             </section>
         </main>
+
+        <aside>
+            <button id="bttButton">&uArr;</button>
+        </aside>
 
         <footer>
             <p>Site <a href="https://openhivefr.github.io">OpenHiveFR.github.io</a> --- <abbr title="Work In Progress">WIP</abbr> --- 2020</p>
@@ -73,4 +96,6 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="js/scripts/scrollToTop.js"></script>
+
 </html>
