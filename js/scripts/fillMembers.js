@@ -100,16 +100,7 @@ function createTeam(team) {
     return sectionRoot;
 }
 
-let members = {};
-
-let xmlhttp = new XMLHttpRequest();
-xmlhttp.open("POST", "https://openhivefr.github.io/js/jsons/members.json", false);
-xmlhttp.onreadystatechange = function () {
-    if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
-      members = JSON.parse(xmlhttp.responseText);
-    }
-};
-xmlhttp.send(null);
+// "members" is the JSON containing every members
 
 let root = document.getElementById("members");
 console.log(members);

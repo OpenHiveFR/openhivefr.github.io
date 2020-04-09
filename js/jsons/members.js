@@ -1,4 +1,4 @@
-{
+members = {
     "admins": {
         "id": "admins",
         "title": "Équipe d'Administration",
