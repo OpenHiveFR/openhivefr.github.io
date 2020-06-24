@@ -9,7 +9,7 @@ function removeVoidStrings(list) {
 }
 
 let syncCallback = function trackNewIFrameURL(mutations) {
-    let translationsBasePath = "https://raw.githubusercontent.com/OpenHiveFR/aoc2019FR/master/";
+    let translationsBasePath = "http://gist-it.appspot.com/raw.githubusercontent.com/OpenHiveFR/aoc2019FR/master/";
 
     let translatedGlobalPages = [] // ["unavailable", "about", "settings", "auth", "support", "sponsors",
                                    // "stats", "leaderboard"];
