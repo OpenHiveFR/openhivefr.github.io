@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OpenHive - Summer Code 2020</title>
+    <style id="buttonStyle"></style>
     <link rel="stylesheet" href="../../skins/main.css"/>
     <link rel="stylesheet" href="../../skins/sc2020.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -61,12 +62,13 @@
     </header>
 
     <main class="soc2020">
+        <nav id="daysMenu"></nav>
         <iframe id="aoc" src="https://adventofcode.com/2019/" frameborder="0"></iframe>
-        <iframe id="translation" src="https://raw.githubusercontent.com/OpenHiveFR/aoc2019FR/master/index.html" frameborder="0"></iframe>
+        <iframe id="translation" src="./translations/unavailable.html" data-oldURL="./translations/unavailable.html" frameborder="0"></iframe>
     </main>
 
 </body>
 
-<script src="../../js/scripts/translation2020Sync.js"></script>
+<script src="../../js/scripts/fillDaysMenu.js"></script>
 
 </html>
