@@ -5,24 +5,54 @@ main.soc2020 {
     border-radius: 0;
     margin: 0;
     background-color: #2B2D2F;
-}
-
-nav {
-    z-index: 1;
+    display: flex;
+    flex: 2 1 auto;
 }
 
 main.soc2020>iframe {
-    position: absolute;
-    height: calc(100% - calc(96px + 10px + 10px + 1px + 1px));
-    width: calc(50% - calc(10px + 10px + 10px));
+    width: 50%;
 }
 
-iframe#aoc {
-    margin-right: 10px;
-    
+main.soc2020>iframe#aoc {
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
-iframe#translation {
-    margin-left: 10px;
-    right:0;
+main.soc2020>iframe#translations {
+    margin-left: 1em;
+}
+
+main.soc2020>nav#daysMenu {
+    margin-right: 1em;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    width: fit-content;
+    width: -moz-fit-content;
+    width: -webkit-fit-content;
+    flex-grow: 1;
+    background-color: #01010D;
+}
+
+main.soc2020>nav#daysMenu>button.dayButton {
+    border: none;
+    background-color: inherit;
+    color: #009900;
+    transition: color 0.25s;
+}
+
+main.soc2020>nav#daysMenu>button.dayButton:hover {
+    color: red;
+    background-color: #10101A;
+}
+
+main.soc2020>nav#daysMenu>button.dayButton#clicked {
+    color: #FFFF66;
+    background-color: #10101A;
+}
+
+main.soc2020>nav#daysMenu>button.dayButton#clicked:hover {
+    color: red;
+    background-color: #10101A;
 }
