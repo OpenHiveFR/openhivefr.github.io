@@ -1,4 +1,4 @@
-$translatedAmount = 14
+$translatedAmount = 15
 $translationPath = "../summercode/2020/translations/"
 
 # Getting days translations
