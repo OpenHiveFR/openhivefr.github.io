@@ -2,63 +2,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>OpenHive - Summer Code 2020</title>
-    <style id="buttonStyle"></style>
+
     <link rel="stylesheet" href="../../skins/main.css"/>
     <link rel="stylesheet" href="../../skins/sc2020.css">
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
-    <header>
+    <header class="soc2020">
         <a href="https://openhivefr.github.io">
             <picture>
-                <source media="(orientation: landscape) and (min-width: 1000px)" srcset="../../images/logos/openhive_logo_only.png"/>
-                <source media="(orientation: portrait), (max-width: 1000px)"  srcset="../../images/logos/openhive_logo_minimal.png"/>
-                <img src="../../images/logos/openhive_logo_only.png" alt="Logo OpenHive" class="img-fluid"/>
+                <img src="../../images/logos/openhive_logo_minimal.png" alt="Logo OpenHive" class="img-fluid"/>
             </picture></a>
-        <nav class="dropdown">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="https://openhivefr.github.io/projects" aria-haspopup="true" aria-expanded="false">
-                        Projets
-                    </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="https://openhivefr.github.io/projects.html#discordUnicaen">Serveur Discord</a>
-                        <a class="dropdown-item" href="https://openhivefr.github.io/projects.html#openhivefrsite">Site OpenHive</a>
-                        <a class="dropdown-item" href="https://openhivefr.github.io/projects.html#rayborn">RayBorn</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="https://openhivefr.github.io/ressources.html#" aria-haspopup="true" aria-expanded="false">
-                        Ressources
-                    </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="https://openhivefr.github.io/ressources.html#">Cours & tutos</a>
-                        <a class="dropdown-item" href="https://openhivefr.github.io/ressources.html#">Exercices</a>
-                        <a class="dropdown-item" href="https://openhivefr.github.io/ressources.html#">Logiciels</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="https://openhivefr.github.io/blogs.html" aria-haspopup="true" aria-expanded="false">
-                        Blogs
-                    </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="https://openhivefr.github.io/blogs.html#devlogs">Devlogs</a>
-                        <a class="dropdown-item" href="https://openhivefr.github.io/blogs.html#news">News</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="https://openhivefr.github.io/contacts.html" aria-haspopup="true" aria-expanded="false">
-                        Contacts
-                    </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="https://openhivefr.github.io/contacts.html#join">Nous rejoindre</a>
-                        <a class="dropdown-item" href="https://openhivefr.github.io/contacts.html#members">Membres</a>
-                    </div>
-                </li>
-            </ul>
-        </nav>
-        <h1 class="hidden">OpenHive</h1>
+        <h1>Summer Code 2020</h1>
+        <span id="langSwitch" data-chosen-lang="fr"><span id="en" class="unchosenLang">[Épreuve AoC]</span> / <span id="fr" class="chosenLang">[Trad FR]</span></span>
     </header>
 
     <main class="soc2020">
@@ -70,5 +32,6 @@
 </body>
 
 <script src="../../js/scripts/fillDaysMenu.js"></script>
+<script src="../../js/scripts/langSwitch.js"></script>
 
 </html>
