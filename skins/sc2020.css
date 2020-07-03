@@ -194,6 +194,7 @@ main.soc2020>nav#daysMenu {
     display: flex;
     flex-direction: column;
     border-right: solid var(--component-border-color) 1px;
+    background-color: var(--primary-bg-color);
 }
 
 main.soc2020>nav#daysMenu>button.dayButton {
@@ -229,6 +230,7 @@ main.soc2020>iframe#aoc {
 
 main.soc2020>iframe {
     width: 100%;
+    height: calc(100vh - var(--header-height));
 }
 
 
