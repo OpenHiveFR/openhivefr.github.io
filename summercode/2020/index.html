@@ -5,7 +5,6 @@
 
     <title>OpenHive - Summer Code 2020</title>
 
-    <link rel="stylesheet" href="../../skins/main.css"/>
     <link rel="stylesheet" href="../../skins/sc2020.css">
     <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
     
@@ -15,23 +14,29 @@
 </head>
 <body>
     <header class="soc2020">
-        <a href="https://openhivefr.github.io">
-            <picture>
-                <img src="../../images/logos/openhive_logo_minimal.png" alt="Logo OpenHive" class="img-fluid"/>
-            </picture></a>
-        <h1>Summer Code 2020</h1>
-        <span id="langSwitch" data-chosen-lang="fr"><span id="en" class="unchosenLang">[Épreuve AoC]</span> / <span id="fr" class="chosenLang">[Trad FR]</span></span>
+        <div class="titleDiv">
+            <a href="https://openhivefr.github.io">
+                <img src="../../images/logos/openhive_logo_minimal.png" alt="Logo OpenHive"/>
+            </a>
+            <h1><span class="longText">Summer Code 2020</span><span class="shortText">SC2020</span></h1>
+        </div>
+        <div class="menu">
+            <span id="daysMenuSwitch" class="shortText" data-active="0">[Days]</span>
+            <span id="langSwitch" data-chosen-lang="fr"><span id="en" class="unchosenLang"><span class="longText">[Épreuve AoC]</span><span class="shortText">[AoC]</span></span> / <span id="fr" class="chosenLang"><span class="longText">[Trad FR]</span><span class="shortText">[FR]</span></span></span>
+        </div>
     </header>
 
     <main class="soc2020">
         <nav id="daysMenu"></nav>
+        <div id="darkMask"></div>
         <iframe id="aoc" src="https://adventofcode.com/2019/" frameborder="0"></iframe>
-        <iframe id="translation" src="./translations/unavailable.html" data-oldURL="./translations/unavailable.html" frameborder="0"></iframe>
+        <iframe id="translation" src="./translations/unavailable.html" frameborder="0"></iframe>
     </main>
 
 </body>
 
 <script src="../../js/scripts/fillDaysMenu.js"></script>
 <script src="../../js/scripts/langSwitch.js"></script>
+<script src="../../js/scripts/daysMenuSwitch.js"></script>
 
 </html>

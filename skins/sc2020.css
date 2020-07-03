@@ -1,3 +1,43 @@
+/***************
+ ** VARIABLES **
+ ***************/
+
+
+:root {
+        /* Colors */
+    --primary-bg-color: #0f0f23;
+    --primary-text-color: #009900;
+    --activated-text-color: #00cc00;
+    --component-border-color: #00cc00;
+    --hovered-text-color: #99ff99;
+    --dark-mask-color: rgba(0, 0, 0, 0.75);
+        /* Fonts */
+    --main-font: 'Source Code Pro', sans-serif;
+        /* Sizes */
+    --header-height: 8vh;
+        /* Effects */
+    --activated-glow: 0 0 5px #00cc00;
+}
+
+
+    /****************
+    ** WHOLE PAGE **
+    ****************/
+
+
+* {
+    box-sizing: border-box;
+    font-family: var(--main-font);
+    background-color: var(--primary-bg-color);
+    color: var(--primary-text-color);
+}
+
+
+    /***********
+     ** FONTS **
+     ***********/
+
+
 /* Source Code Pro : cyrillic-ext */
 @font-face {
     font-family: 'Source Code Pro';
@@ -52,127 +92,214 @@
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-:root {
-    --secondary-bg-color: #0f0f23;
+
+    /****************
+     ** MAIN RULES **
+     ****************/
+
+
+        /* Making sure the page covers whole viewport */
+
+body {
+    height: 100vh; /* Body covers whole viewport's height */
+    width:  100vw; /* Body covers whole viewport's width  */
+    display: flex;
+    flex-direction: column; /* Putting header on top and main just below */
 }
+
+        /* Making sure only long text is displayed */
+
+.shortText {
+    display: none;
+}
+
+        /* Making header look good */
 
 header.soc2020 {
-    background-color: var(--secondary-bg-color);
-    height: 8vh;
-    border-bottom: solid #009900 1px;
+    display: flex;
+    flex-direction: row; /* Make the header a row of content */
+    justify-content: space-between; /* Make the menu at the far right */
+    
+    border-bottom: solid var(--component-border-color) 1px;
+
+    height: var(--header-height);
 }
 
-header.soc2020>a {
-    width: auto;
+header.soc2020>div.titleDiv {
+    display: flex;
+    flex-direction: row;
+}
+
+header.soc2020>div.titleDiv>a {
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    width: calc(var(--header-height) - 1vh); /* Fixing width of anchor tag containing the logo */
+}
+
+header.soc2020>div.titleDiv>a>img {
+    height: 100%; /* Centering the logo */
+}
+
+header.soc2020>div.titleDiv>h1>span {
+    color: var(--activated-text-color);
+    text-shadow: 0 0 5px var(--activated-text-color);
     margin-left: 1vw;
-    margin-right: 1vw;
 }
 
-header.soc2020>a>picture  {
-    display: block;
-}
-
-header.soc2020>a>picture>img {
-    height: 6vh;
-    margin-top: 1vh;
-    margin-bottom: 1vh;
-}
-
-header.soc2020>h1 {
-    font-size: 6vh;
-    margin-top: 1vh;
-    margin-bottom: 1vh;
-    font-family: 'Source Code Pro', sans-serif;
-    color: #00cc00;
-    line-height: 6vh;
-    text-shadow: 0 0 5px #00cc00;
-    float: left;
-}
-
-header.soc2020>span#langSwitch {
-    color: #009900;
-    height: 6vh;
-    margin-top: 1vh;
-    float: right;
-    margin-right: 10px;
-    line-height: 8vh;
-    font-family: 'Source Code Pro', sans-serif;
+header.soc2020>div.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; /* Centering menu */
+    
+    /* Preventing user selection on multiple browsers */
     user-select: none;
-    -webkit-user-select: none;
     -moz-user-select: none;
-    -khtml-user-select: none;
+    -webkit-user-select: none;
     -ms-user-select: none;
 }
 
-header.soc2020>span#langSwitch>span.chosenLang {
-    color: #00cc00;
-    text-shadow: 0 0 5px #00cc00;
-    font-family: 'Source Code Pro', sans-serif;
+header.soc2020>div.menu>span#langSwitch {
+    padding-right: 1vw;
+    padding-left: 1vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
 }
 
-header.soc2020>span#langSwitch>span.unchosenLang {
-    font-family: 'Source Code Pro', sans-serif;
+header.soc2020>div.menu>span#langSwitch>span.chosenLang>span {
+    color: var(--activated-text-color);
+    text-shadow: var(--activated-glow);
 }
 
-header.soc2020>span#langSwitch:hover>span.unchosenLang {
-    color: #99ff99;
-    font-family: 'Source Code Pro', sans-serif;
+header.soc2020>div.menu>span#langSwitch:hover>span.unchosenLang>span,
+header.soc2020>div.menu>span#langSwitch:hover {
+    color: var(--hovered-text-color);
+    text-shadow: none;
 }
+
+    /* Making sure Main element covers the rest of Body and thus puts daysMenu next to an iFrame */
 
 main.soc2020 {
-    width:100%;
-    height: calc(100% - 96px);
-    border: none;
-    border-radius: 0;
-    margin: 0;
-    background-color: var(--secondary-bg-color);
+    height: calc(100vh - var(--header-height));
     display: flex;
-    flex: 2 1 auto;
+    flex-direction: row;
+}
+
+    /* Making daysMenu nav a column of buttons and styling these */
+
+main.soc2020>nav#daysMenu {
+    display: flex;
+    flex-direction: column;
+    border-right: solid var(--component-border-color) 1px;
+}
+
+main.soc2020>nav#daysMenu>button.dayButton {
+    border: none;
+}
+
+    /* Emphasizing the current selected day's corresponding button */
+
+main.soc2020>nav#daysMenu>button.dayButton#clicked {
+    outline: 0;
+    color: var(--activated-text-color);
+    text-shadow: var(--activated-glow);
+}
+
+    /* And styling buttons when hovered and clicked */
+
+main.soc2020>nav#daysMenu>button.dayButton:hover {
+    outline: 0;
+    color: var(--activated-text-color);
+    text-shadow: var(--activated-glow);
+}
+
+main.soc2020>nav#daysMenu>button.dayButton:hover {
+    outline: 0;
+    color: var(--hovered-text-color);
+}
+
+    /* Avoiding aoc IFrame to display at first */
+
+main.soc2020>iframe#aoc {
+    display: none;
 }
 
 main.soc2020>iframe {
     width: 100%;
 }
 
-main.soc2020>iframe#aoc {
-    display: none;
-}
 
-main.soc2020>nav#daysMenu {
-    margin-right: 1em;
-    display: flex;
-    flex-direction: column;
-    max-width: 4em;
-    flex-grow: 1;
-    background-color: var(--secondary-bg-color);
-    overflow-y: auto;
-}
+    /*******************
+     ** MEDIA QUERIES **
+     *******************/
 
-main.soc2020>nav#daysMenu>button.dayButton {
-    border: none;
-    background-color: inherit;
-    color: #009900;
-    font-family: 'Source Code Pro', sans-serif;
-    padding-top: 3px;
-    padding-bottom: 3px;
-}
 
-main.soc2020>nav#daysMenu>button.dayButton:hover {
-    color: #99ff99;
-    background-color: var(--secondary-bg-color);
-}
+@media (max-width: 800px) {
+    span.shortText {
+        display: inline-block;
+    }
 
-main.soc2020>nav#daysMenu>button.dayButton:active {
-    outline: 0;
-}
+    span.longText {
+        display: none;
+    }
 
-main.soc2020>nav#daysMenu>button.dayButton#clicked {
-    color: white;
-    background-color: var(--secondary-bg-color);
-    outline: 0;
-}
+    header.soc2020>div.menu {
+        justify-content: space-between;
+        border-left: solid var(--component-border-color) 1px;
+    }
 
-main.soc2020>nav#daysMenu>button.dayButton#clicked:hover {
-    color: #99ff99;
-    background-color: var(--secondary-bg-color);
+    header.soc2020>div.menu>span {
+        font-size: small;
+    }
+
+    header.soc2020>div.menu>span#langSwitch {
+        text-align: center;
+        padding-top: 0.5vh;
+        padding-bottom: 0.5vh;
+    }
+
+    header.soc2020>div.menu>span#daysMenuSwitch {
+        text-align: center;
+        padding-top: 0.5vh;
+        padding-bottom: 0.5vh;
+    }
+
+    header.soc2020>div.menu>span.activated#daysMenuSwitch {
+        color: var(--activated-text-color);
+        text-shadow: var(--activated-glow);
+    }
+
+        /* Making the daysMenu only appear when clicked and darkening the rest of the
+           main page when doing so */
+
+    main.soc2020>nav#daysMenu {
+        position: absolute;
+        left: -100vw;
+        z-index: 2;
+        height: calc(100vh - var(--header-height));
+        transition: left 0.25s;
+    }
+
+    main.soc2020>nav.activated#daysMenu {
+        left: 0;
+    }
+
+        /* defining the dark mask */
+
+    main.soc2020>div#darkMask {
+        position: absolute;
+        width: 100vw;
+        height: calc(100vh - var(--header-height));
+        left: 0;
+        top: var(--header-height);
+        z-index: -2;
+        background-color: rgba(0, 0, 0, 0);
+        transition: background-color 0.25s;
+    }
+
+    main.soc2020>div.activated#darkMask {
+        z-index: 1;
+        background-color: var(--dark-mask-color);
+    }
 }
