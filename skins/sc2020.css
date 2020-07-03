@@ -247,6 +247,7 @@ main.soc2020>iframe {
     header.soc2020>div.menu {
         justify-content: space-between;
         border-left: solid var(--component-border-color) 1px;
+        background-color: rgba(0, 0, 0, 0);
     }
 
     header.soc2020>div.menu>span {
