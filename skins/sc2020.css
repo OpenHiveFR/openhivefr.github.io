@@ -11,6 +11,7 @@
     --component-border-color: #00cc00;
     --hovered-text-color: #99ff99;
     --dark-mask-color: rgba(0, 0, 0, 0.75);
+    --transparent-color: rgba(0, 0, 0, 0);
         /* Fonts */
     --main-font: 'Source Code Pro', sans-serif;
         /* Sizes */
@@ -28,7 +29,7 @@
 * {
     box-sizing: border-box;
     font-family: var(--main-font);
-    background-color: var(--primary-bg-color);
+    background-color: var(--transparent-color);
     color: var(--primary-text-color);
 }
 
@@ -100,11 +101,12 @@
 
         /* Making sure the page covers whole viewport */
 
-body {
+body.soc2020 {
     height: 100vh; /* Body covers whole viewport's height */
     width:  100vw; /* Body covers whole viewport's width  */
     display: flex;
     flex-direction: column; /* Putting header on top and main just below */
+    background-color: var(--primary-bg-color);
 }
 
         /* Making sure only long text is displayed */
@@ -247,7 +249,6 @@ main.soc2020>iframe {
     header.soc2020>div.menu {
         justify-content: space-between;
         border-left: solid var(--component-border-color) 1px;
-        background-color: rgba(0, 0, 0, 0);
     }
 
     header.soc2020>div.menu>span {
