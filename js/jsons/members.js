@@ -4,21 +4,21 @@ members = {
         "title": "Équipe d'Administration",
         "content": [
             {
-                "surname": null,
+                "surname": "Christopher",
                  "pseudo": "Helldragger",
-                   "name": null,
-                 "avatar": null,
-                "discord": null,
-                   "mail": null,
-                   "site": null,
-                 "github": null
+                   "name": "Jacquiot",
+                 "avatar": "chris.png",
+                "discord": "Helldragger#7021",
+                   "mail": "chr.jacquiot@gmail.com",
+                   "site": "linkedin.com/in/c-jacquiot/",
+                 "github": "Helldragger"
             },
             {
                 "surname": "Benjamin",
                  "pseudo": "PaoDerDoktor",
                    "name": "Castel",
                  "avatar": "pao.png",
-                "discord": null,
+                "discord": "PaoDerDoktor#7394",
                    "mail": "paoderdoktor@gmail.com",
                    "site": "paoderdoktor.github.io",
                  "github": "PaoDerDoktor"

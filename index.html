@@ -4,7 +4,9 @@
         <title>OpenHive - Accueil</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="skins/main.css"/>
+        <link rel="stylesheet" href="skins/contacts.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="js/jsons/members.js"></script>
     </head>
     <body>
         <header>
@@ -15,46 +17,6 @@
                     <img src="images/logos/openhive_logo_only.png" alt="Logo OpenHive" class="img-fluid"/>
                 </picture></a>
             <nav class="dropdown">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="https://openhivefr.github.io/projects" aria-haspopup="true" aria-expanded="false">
-                            Projets
-                        </a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="https://openhivefr.github.io/projects.html#discordUnicaen">Serveur Discord</a>
-                            <a class="dropdown-item" href="https://openhivefr.github.io/projects.html#openhivefrsite">Site OpenHive</a>
-                            <a class="dropdown-item" href="https://openhivefr.github.io/projects.html#rayborn">RayBorn</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="https://openhivefr.github.io/ressources.html#" aria-haspopup="true" aria-expanded="false">
-                            Ressources
-                        </a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="https://openhivefr.github.io/ressources.html#">Cours & tutos</a>
-                            <a class="dropdown-item" href="https://openhivefr.github.io/ressources.html#">Exercices</a>
-                            <a class="dropdown-item" href="https://openhivefr.github.io/ressources.html#">Logiciels</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="https://openhivefr.github.io/blogs.html" aria-haspopup="true" aria-expanded="false">
-                            Blogs
-                        </a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="https://openhivefr.github.io/blogs.html#devlogs">Devlogs</a>
-                            <a class="dropdown-item" href="https://openhivefr.github.io/blogs.html#news">News</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="https://openhivefr.github.io/contacts.html" aria-haspopup="true" aria-expanded="false">
-                            Contacts
-                        </a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="https://openhivefr.github.io/contacts.html#join">Nous rejoindre</a>
-                            <a class="dropdown-item" href="https://openhivefr.github.io/contacts.html#members">Membres</a>
-                        </div>
-                    </li>
-                </ul>
             </nav>
             <h1 class="hidden">OpenHive</h1>
         </header>
@@ -62,29 +24,30 @@
         <main>
             <section>
                 <h2>OpenHive, c'est un <em>réseau étudiant</em></h2>
-                <p>Créé par des étudiants en Licence Informatique de l'<abbr title="Université de Caen, Normandie">Unicaen</abbr> en 2017, OpenHive est un projet indépendant visant à mettre en commun des connaissances, des outils et des compétences pour les étudiants, les débutants en informatiques, et le reste.</p>
-                <p>Démarrant d'un <a href="#">Serveur discord</a> créé pour permettre une meilleure communication entre les étudiants de première année, OpenHive a très vite muté et grandi. Aujourd'hui, le serveur Discord compte plus de 250 membres du cursus informatique de <abbr title="Licence 1">L1</abbr> à <abbr title="Master 1">M1</abbr>, ainsi que des invités extérieurs, professionels, étudiants ou proches du domaine informatique au sens large.</p>
+                <p>Créé par des étudiants en Licence Informatique de l'<abbr title="Université de Caen, Normandie">Unicaen</abbr> en 2017, OpenHive est un projet indépendant visant à mettre en commun des connaissances, des outils et des compétences pour les étudiants, les débutants en informatiques, les professeurs, et le reste.</p>
+                <p>Démarrant d'un serveur discord créé pour permettre une meilleure communication entre les étudiants de première année, OpenHive a très vite muté et grandi. Au jour du 22/11/2020, nous comptons plus de 700 membres incluant la majorité du cursus informatique de l'Université de Caen, quelques membres d'autres cursus ayant des cours en commun, ainsi que des invités extérieurs, professeurs, professionnels, étudiants ou proches du domaine informatique au sens large.</p>
             </section>
             <hr/>
             <section>
-                <h2>OpenHive, c'est un <em>ensemble de projets</em></h2>
-                <p>Afin de remplir tous ses objectifs, le projet OpenHive a été structuré en plusieurs <a href="#">sous-projets</a>. Ceux-ci sont prévus à long terme, avec une volonté de dépasser le contexte étudiant.</p>
-                <p>La liste des projets est actuellement très susceptible d'être étendue, et chaque projet y étant actuellement présent est soit réalisé soit en développement.</p>
-            </section>
-            <hr/>
-            <section>
-                <h2>OpenHive, c'est un portail <em>ouvert</em></h2>
+                <h2>OpenHive, c'est un portail <em>semi-ouvert</em></h2>
                 <p>Qui que vous soyez, peu importe votre niveau et ce que vous souhaitez apporter au projet, vous y trouverez votre compte.</p>
                 <p>Vous pouvez y apporter vos idées, vos compétences, vos avis, et en bénéficier en totalité.</p>
                 <p>Nous sommes très attachés aux caractères communautaire, éducatif et de soutien que nous souhaitons donner à OpenHive. </p>
+                <p>Pour rejoindre le serveur, contactez nous!</p>
+            </section>
+            Pour le summercode 2020 <a href="./summercode/2020/index.html">c'est par ici!</a>
+            <section id="members">
+                <h2>Contact</h2>
             </section>
         </main>
 
         <footer>
-            <p>Site <a href="https://openhivefr.github.io">OpenHiveFR.github.io</a> --- <abbr title="Work In Progress">WIP</abbr> --- 2020</p>
+            <p><abbr title="Work In Progress">WIP</abbr> --- 2020</p>
         </footer>
+
     </body>
 
+    <script src="js/scripts/fillMembers.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
