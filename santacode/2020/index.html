@@ -1,0 +1,38 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+
+    <title>OpenHive - Summer Code 2020</title>
+
+    <link rel="stylesheet" href="../../skins/sc2020.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body class="soc2020">
+    <header class="soc2020">
+        <div class="titleDiv">
+            <a href="https://openhivefr.github.io">
+                <img src="../../images/logos/openhive_logo_minimal.png" alt="Logo OpenHive"/> 
+            </a>
+            <h1><span class="longText">Summer Code 2020</span><span class="shortText">SC2020</span></h1>
+        </div>
+        <div class="menu">
+            <span id="daysMenuSwitch" class="shortText" data-active="0">[Days]</span>
+            <span id="langSwitch" data-chosen-lang="fr"><span id="en" class="unchosenLang"><span class="longText">[Épreuve AoC]</span><span class="shortText">[AoC]</span></span> / <span id="fr" class="chosenLang"><span class="longText">[Trad FR]</span><span class="shortText">[FR]</span></span></span>
+        </div>
+    </header>
+
+    <main class="soc2020">
+        <nav id="daysMenu"></nav>
+        <div id="darkMask"></div>
+        <iframe id="aoc" src="https://adventofcode.com/2020/" frameborder="0"></iframe>
+        <iframe id="translation" src="./translations/unavailable.html" frameborder="0"></iframe>
+    </main>
+
+</body>
+
+<script src="../../js/scripts/fillDaysMenu2.js"></script>
+<script src="../../js/scripts/langSwitch.js"></script>
+<script src="../../js/scripts/daysMenuSwitch.js"></script>
+
+</html>
