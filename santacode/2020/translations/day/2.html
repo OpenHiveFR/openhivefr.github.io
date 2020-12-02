@@ -25,7 +25,12 @@
 <p>Alors qu'il apparaît que vous avez correctement validé les mots-de-passe, ils n'ont pas l'air d'être ce que le Système Officiel d'Authentification des Entreprises de Toboggan attends.</p>
 <p>Le gérant du magasin de location réalise soudainement qu'il vient de vous expliquer accidentellement les règles des politiques de mots-de-passe de son ancien travail, au magasin de location de luges plus bas dans la rue ! En réalité, la Politique Officielle des Entreprises de Toboggan fonctionne un peu différemment.</p>
 <p>Chaque politique décrit en fait deux <em>positions dans le mot-de-passe</em>, où <code>1</code> désigne le premier caractère, <code>2</code> le deuxième caractère, et ainsi de suite (Attention, les Politiques des Entreprises de Toboggan n'utilisent pas le concept "index zéro" !). <em>Exactement une de ces positions</em> doit contenir la lettre donnée. D'autres éventuelles occurrences de cette lettre dans le mot-de-passe sont hors du champ d'application des politiques.</p>
-<p>Selon la même liste d'exemples qu'au-dessus : - <code>1-3 a: <em>a</em>b<em>c</em>de</code> est <em>valide</em> : la position <code>1</code> contient la lettre <code>a</code> et la position <code>3</code> ne la contient pas. - <code>1-3 b: <em>c</em>d<em>e</em>fg</code> est <em>invalide</em> : aucune des positions <code>1</code> ou <code>3</code> ne contiennent la lettre <code>b</code>. - <code>2-9 c: c<em>c</em>cccccc<em>c</em></code> est <em>invalide</em> : les positions <code>2</code> et <code>9</code> contiennent toutes les deux la lettre <code>c</code>.</p>
+<p>Selon la même liste d'exemples qu'au-dessus :</p>
+<ul>
+<li><code>1-3 a: <em>a</em>b<em>c</em>de</code> est <em>valide</em> : la position <code>1</code> contient la lettre <code>a</code> et la position <code>3</code> ne la contient pas.</li>
+<li><code>1-3 b: <em>c</em>d<em>e</em>fg</code> est <em>invalide</em> : aucune des positions <code>1</code> ou <code>3</code> ne contiennent la lettre <code>b</code>.</li>
+<li><code>2-9 c: c<em>c</em>cccccc<em>c</em></code> est <em>invalide</em> : les positions <code>2</code> et <code>9</code> contiennent toutes les deux la lettre <code>c</code>.</li>
+</ul>
 <p><em>Combien de mots-de-passe sont valides</em> selon la nouvelle interprétation des politiques ?</p>
 </section> 
 </body> 
