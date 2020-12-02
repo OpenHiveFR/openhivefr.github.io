@@ -107,3 +107,7 @@ section code {
     background-color: #10101A;
     display: inline-block;
 }
+
+section ul {
+    list-style-type: "— ";
+}
