@@ -1,6 +1,6 @@
 let daysMenu = document.getElementById("daysMenu");
 
-let translatedDays = 1;
+let translatedDays = 2;
 
 for (let i = 0; i <= translatedDays; i++) {
     let newButton = document.createElement("BUTTON");
