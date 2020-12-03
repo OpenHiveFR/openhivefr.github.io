@@ -1,0 +1,68 @@
+<!DOCTYPE html> 
+<html lang='fr'> 
+<head> 
+<link rel='stylesheet' type='text/css' href='../../../../skins/sc2020-translation.css'> 
+<meta name='day' content="day3"> 
+</head> 
+<body> 
+<section id='translation_part_one'> 
+<h2 id="jour-3-la-trajectoire-du-toboggan----">--- Jour 3 : La Trajectoire du Toboggan ---</h2>
+<p>Une fois le problème d'authentification du toboggan résolu, vous partez en direction de l'aéroport. Bien que voyager en toboggan est facile, ce n'est clairement pas sûr : leur maniabilité est très basse et la zone est couverte d'arbres. Vous devrez trouver quel angle vous fera rencontrer le moins d'arbres.</p>
+<p>À cause de la géologie locale, les arbres de cette zone poussent exactement sur les coordonnées d'une grille. Vous créez une carte (votre entrée de puzzle) de la zone, en notant les carrés vides (<code>.</code>) et les arbres (<code>#</code>). Par exemple :</p>
+<pre><code>..##.......
+#...#...#..
+.#....#..#.
+..#.#...#.#
+.#...##..#.
+..#.##.....
+.#.#.#....#
+.#........#
+#.##...#...
+#...##....#
+.#..#...#.#</code></pre>
+<p>Ce ne sont cependant pas les seuls arbres : à cause de quelque chose à propos de laquelle vous avez lu un article un jour impliquant la génétique arboricole et la stabilité des biomes, le même schéma se répète vers la droite beaucoup de fois :</p>
+<pre><code><em>..##.......</em>..##.........##.........##.........##.........##.......  --->
+<em>#...#...#..</em>#...#...#..#...#...#..#...#...#..#...#...#..#...#...#..
+<em>.#....#..#.</em>.#....#..#..#....#..#..#....#..#..#....#..#..#....#..#.
+<em>..#.#...#.#</em>..#.#...#.#..#.#...#.#..#.#...#.#..#.#...#.#..#.#...#.#
+<em>.#...##..#.</em>.#...##..#..#...##..#..#...##..#..#...##..#..#...##..#.
+<em>..#.##.....</em>..#.##.......#.##.......#.##.......#.##.......#.##.....  --->
+<em>.#.#.#....#</em>.#.#.#....#.#.#.#....#.#.#.#....#.#.#.#....#.#.#.#....#
+<em>.#........#</em>.#........#.#........#.#........#.#........#.#........#
+<em>#.##...#...</em>#.##...#...#.##...#...#.##...#...#.##...#...#.##...#...
+<em>#...##....#</em>#...##....##...##....##...##....##...##....##...##....#
+<em>.#..#...#.#</em>.#..#...#.#.#..#...#.#.#..#...#.#.#..#...#.#.#..#...#.#  ---></code></pre>
+<p>Vous commencez dans le carré vide (<code>.</code>) dans le coin en haut à gauche et devez atteindre le fond (en dessous de la ligne la plus basse de votre carte).</p>
+<p>Le toboggan peut uniquement suivre quelques pentes spécifiques (vous en avez pris un moins cher qui préfère les nombres rationnels) ; commencez par <em>compter tous les arbres</em> que vous rencontreriez en utilisant la pente <em>droite 3, bas 1</em> :</p>
+<p>À partir de votre position de départ en haut à gauche, vérifiez la position se trouvant à droite de 3 cases et en-dessous d'1 case. Ensuite, vérifiez la position se trouvant à droite de cette nouvelle case de 3 cases et en dessous d'1 case, et ainsi de suite jusqu'à ce que vous ayez atteint le fond de la carte.</p>
+<p>Les endroits que vous devriez vérifier dans l'exemple ci-dessus sont marqués ici d'un <code><em>O</em></code> là où se trouve un carré vide et d'un <code><em>X</em></code> là où se trouve un arbre.</p>
+<pre><code>..##.........##.........##.........##.........##.........##.......  --->
+#..<em>O</em>#...#..#...#...#..#...#...#..#...#...#..#...#...#..#...#...#..
+.#....<em>X</em>..#..#....#..#..#....#..#..#....#..#..#....#..#..#....#..#.
+..#.#...#<em>O</em>#..#.#...#.#..#.#...#.#..#.#...#.#..#.#...#.#..#.#...#.#
+.#...##..#..<em>X</em>...##..#..#...##..#..#...##..#..#...##..#..#...##..#.
+..#.##.......#.<em>X</em>#.......#.##.......#.##.......#.##.......#.##.....  --->
+.#.#.#....#.#.#.#.<em>O</em>..#.#.#.#....#.#.#.#....#.#.#.#....#.#.#.#....#
+.#........#.#........<em>X</em>.#........#.#........#.#........#.#........#
+#.##...#...#.##...#...#.<em>X</em>#...#...#.##...#...#.##...#...#.##...#...
+#...##....##...##....##...#<em>X</em>....##...##....##...##....##...##....#
+.#..#...#.#.#..#...#.#.#..#...<em>X</em>.#.#..#...#.#.#..#...#.#.#..#...#.#  ---></code></pre>
+<p>Dans cet exemple, traverser la zone en utilisant la pente prédéfinie (droite 3, bas1) causerait la rencontre de <code><em>7</code></em> arbres.</p>
+<p>Démarrant au coin en haut à gauche de votre carte et suivant une pente de droite 3 et bas 1, <em>combien d'arbres rencontreriez vous ?</em></p>
+</section> 
+<section id='translation_part_two'> 
+<h2 id="partie-deux----">--- Partie Deux ---</h2>
+<p>Il est temps de vérifier pour les autres pentes disponibles : après tout, vous allez devoir minimiser la probabilité d'un soudain arrêt arboricole.</p>
+<p>Déterminez le nombre d'arbres que vous rencontreriez si, pour chacune de ces pentes, vous démarrez au coin en haut à gauche et traversez la carte jusqu'à son fond :</p>
+<ul>
+<li>Droite 1, bas 1.</li>
+<li>Droite 3, bas 1. (C'est la pente que vous avez déjà vérifiée)</li>
+<li>Droite 5, bas 1.</li>
+<li>Droite 7, bas 1.</li>
+<li>Droite 1, bas 2.</li>
+</ul>
+<p>Dans l'exemple d'au-dessus, ces pentes rencontreraient respectivement <code>2</code>, <code>7</code>, <code>3</code>, <code>4</code> et <code>2</code> arbres. Multipliés ensemble, ces résultats produisent la réponse <code><em>336</em></code>.</p>
+<p><em>Qu'obtenez-vous si vous multipliez ensemble le nombre d'arbres rencontrés par chaque pente listée ?</em></p>
+</section> 
+</body> 
+</html> 

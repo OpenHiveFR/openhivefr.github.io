@@ -1,4 +1,4 @@
-$translatedAmount = 3
+$translatedAmount = 4
 $translationPath = "../santacode/2020/translations/"
 
 # Getting days translations
