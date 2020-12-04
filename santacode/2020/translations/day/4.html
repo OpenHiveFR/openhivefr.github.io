@@ -1,0 +1,111 @@
+<!DOCTYPE html> 
+<html lang='fr'> 
+<head> 
+<link rel='stylesheet' type='text/css' href='../../../../skins/sc2020-translation.css'> 
+<meta name='day' content="day4"> 
+</head> 
+<body> 
+<section id='translation_part_one'> 
+<h2 id="jour-4-traitement-de-passeport----">--- Jour 4 : Traitement de passeport ---</h2>
+<p>Vous arrivez à l'aéroport et réalisez une fois là-bas que vous avez emporté votre Carte d'Identité du Pôle Nord au lieu de votre passeport. Même si ces documents sont extrêmement similaires, la Carte d'Identité du Pôle Nord n'est pas distribuée par un pays et n'est donc pas un document valide pour voyager dans la majorité du monde.</p>
+<p>Apparemment, vous n'êtes pas le seul à avoir des problèmes : une très longue file d'attente s'est formée devant les scanners automatiques de passeports, et le délai pourrait gêner votre itinéraire de voyage.</p>
+<p>Grâce à la sécurité discutable du réseau de l'aéroport, vous vous rendez compte que vous pourriez peut être régler ces deux problèmes en même temps.</p>
+<p>Les scanners automatiques de passeports sont lents parce qu'ils ont du mal à <em>détecter quels passeports ont les champs requis</em>. Les champs attendus sont les suivants :</p>
+<ul>
+<li><code>byr</code> ("Birth of Year", l'année de naissance)</li>
+<li><code>iyr</code> ("Issue Year", l'année de distribution)</li>
+<li><code>eyr</code> ("Expiration Year", l'année d'expiration)</li>
+<li><code>hgt</code> ("Height", la taille)</li>
+<li><code>hcl</code> ("Hair Color", la couleur des cheveux)</li>
+<li><code>ecl</code> ("Eye Color", la couleur des yeux)</li>
+<li><code>pid</code> ("Passport ID", l'identifiant du passeport)</li>
+<li><code>cid</code> ("Country ID", l'identifiant du pays)</li>
+</ul>
+<p>Les données des passeports sont validés en fichiers groupés (l'entrée de votre puzzle). Chaque passeport est représenté par une séquence de paires <code>clef:valeur</code> séparées par des espaces ou des sauts de ligne. Les passeports différents sont séparés par des lignes vides.</p>
+<p>Voici un exemple de fichier groupé content quatre passeports :</p>
+<pre><code>ecl:gry pid:860033327 eyr:2020 hcl:#fffffd
+byr:1937 iyr:2017 cid:147 hgt:183cm
+
+iyr:2013 ecl:amb cid:350 eyr:2023 pid:028048884
+hcl:#cfa07d byr:1929
+
+hcl:#ae17e1 iyr:2013
+eyr:2024
+ecl:brn pid:760753108 byr:1931
+hgt:179cm
+
+hcl:#cfa07d eyr:2025 pid:166559648
+iyr:2011 ecl:brn hgt:59in</code></pre>
+<p>Le premier passeport est <em>valide</em> (tous les huit champs sont présents). Le second passeport est <em>invalide</em> (il manque le champ <code>hgt</code>, la taille).</p>
+<p>Le troisième passeport est intéressant ; le <em>seul champ manquant</em> est <code>cid</code>, on dirait donc des données provenant d'une Carte d'Identité du Pôle Nord, pas un passeport du tout ! À tous les coups, ça n'embêterait personne si vous faisiez en sorte que le système ignore temporairement les champs <code>cid</code> manquants. Traitez ce "passeport" comme <em>valide</em>.</p>
+<p>Le quatrième passeport manque de deux champs : <code>cid</code> et <code>byr</code>. Un <code>cid</code> manquant ne pose pas de problème, mais manquer de n'importe quel autre champ rend le passeport <em>invalide</em>.</p>
+<p>Selon les règles ci-dessus, votre système amélioré considérerait <code><em>2</em></code> passeports valides.</p>
+<p>Comptez le nombre de passeports <em>valides</em> (ceux qui ont tous les champs requis). Traitez <code>cid</code> comme un champs optionnel. <em>Dans votre fichier groupé, combien de passeports sont valides ?</em></p>
+</section> 
+<section id='translation_part_two'> 
+<h2 id="partie-deux----">--- Partie Deux ---</h2>
+<p>La file d'attente avance plus rapidement maintenant, mais avez succinctement entendu l'équipe de sécurité de l'aéroport parler du fait que des passeports avec des données invalides passent au travers des scanners. Vous feriez mieux d'ajouter une validation des données, et vite !</p>
+<p>Vous pouvez continuer à ignorer le champs <code>cid</code>, mais tout autre champs a des règles stricte dictant quelles valeurs sont valides pour la validation automatique :</p>
+<ul>
+<li><code>byr</code> ("Birth of Year", l'année de naissance) - quatre chiffres; au moins <code>1920</code> et au plus <code>2002</code>.</li>
+<li><code>iyr</code> ("Issue Year", l'année de distribution) - quatre chiffres; au moins <code>2010</code> et au plus <code>2020</code>.</li>
+<li><code>eyr</code> ("Expiration Year", l'année d'expiration) - quatre chiffres; au moins <code>2020</code> et au plus <code>2030</code>.</li>
+<li><code>hgt</code> ("Height", la taille) - Un nombre suivi soit par <code>cm</code> soit par <code>in</code> :
+<ul>
+<li>Si c'est <code>cm</code>, le nombre doit être au moins <code>150</code> et au plus <code>193</code>.</li>
+<li>Si c'est <code>in</code>, le nombre doit être au moins <code>59</code> et au plus <code>76</code>.</li>
+</ul></li>
+<li><code>hcl</code> ("Hair Color", la couleur des cheveux) - un <code>#</code> suivi par exactement six caractères <code>0</code>-<code>9</code> ou <code>a</code>-<code>f</code>.</li>
+<li><code>ecl</code> ("Eye Color", la couleur des yeux) - Exactement un mot parmi : <code>amb</code>, <code>blu</code>, <code>brn</code>, <code>gry</code>, <code>grn</code>, <code>hzl</code> ou <code>oth</code>.</li>
+<li><code>pid</code> ("Passport ID", l'identifiant du passeport) - un nombre a neuf chiffres, incluant d'éventuels zéros en tête.</li>
+<li><code>cid</code> ("Country ID", l'identifiant du pays) - Ignoré, manquant ou non.</li>
+</ul>
+<p>Votre travail est de compter les passeports pour lesquels tous les champs requis sont <em>présents</em> et <em>valides</em> selon les règles ci-dessus. Voici quelques exemples de valeurs :</p>
+<pre><code>byr valide:   2002
+byr invalide: 2003
+
+hgt valide:   60in
+hgt valide:   190cm
+hgt invalide: 190in
+hgt invalide: 190
+
+hcl valide:   #123abc
+hcl invalide: #123abz
+hcl invalide: 123abc
+
+ecl valide:   brn
+ecl invalide: wat
+
+pid valide:   000000001
+pid invalide: 0123456789</code></pre>
+<p>Voici quelques passeports invalides :</p>
+<pre><code>eyr:1972 cid:100
+hcl:#18171d ecl:amb hgt:170 pid:186cm iyr:2018 byr:1926
+
+iyr:2019
+hcl:#602927 eyr:1967 hgt:170cm
+ecl:grn pid:012533040 byr:1946
+
+hcl:dab227 iyr:2012
+ecl:brn hgt:182cm pid:021572410 eyr:2020 byr:1992 cid:277
+
+hgt:59cm ecl:zzz
+eyr:2038 hcl:74454a iyr:2023
+pid:3556412378 byr:2007</code></pre>
+<p>Voici quelques passeports valides :</p>
+<pre><code>pid:087499704 hgt:74in ecl:grn iyr:2012 eyr:2030 byr:1980
+hcl:#623a2f
+
+eyr:2029 ecl:blu cid:129 byr:1989
+iyr:2014 pid:896056539 hcl:#a97842 hgt:165cm
+
+hcl:#888785
+hgt:164cm byr:2001 iyr:2015 cid:88
+pid:545766238 ecl:hzl
+eyr:2022
+
+iyr:2010 hgt:158cm hcl:#b6652a ecl:blu byr:1944 eyr:2021 pid:093154719</code></pre>
+<p>Comptez le nombre de passeports <em>valides</em> (ceux ayant tous les champs requis <em>avec des valeurs valides</em>). Continuez de compter le champ <code>cid</code> comme optionnel. <em>Dans votre fichier groupé, combien de passeports sont valides ?</em></p>
+</section> 
+</body> 
+</html> 
