@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html lang='fr'> 
+<head> 
+<link rel='stylesheet' type='text/css' href='../../../../skins/sc2020-translation.css'> 
+<meta name='day' content="day5"> 
+</head> 
+<body> 
+<section id='translation_part_one'> 
+<h2 id="jour-5-embarquement-binaire----">--- Jour 5 : Embarquement Binaire ---</h2>
+<p>Vous embarquez dans votre avion et découvrez un nouveau problème : vous avez perdu votre billet d'embarquement ! Vous ne savez pas quel siège est le vôtre, et tous les agents de bord sont occupés par la vague de passagers ayant soudainement passé les contrôles de passeports.</p>
+<p>Vous écrivez rapidement un programme pour utiliser la caméra de votre téléphone pour scanner tous les billets à proximité (l'entrée de votre puzzle) ; peut-être que vous serez capable de trouver votre place par élimination.</p>
+<p>Au lieu de <a href="https://www.youtube.com/watch?v=oAHbLRjF0vo">zones ou de groupes</a>, cette compagnie aérienne utilise <em>un partitionnement binaire de l'espace</em> pour placer les passagers. Un siège peut être désigné comme <code>FBFBBFFRLR</code>, où <code>F</code> signifie "front" (devant), <code>B</code> siginifie "back" (arrière), <code>L</code> signifie "left" (gauche), et <code>R</code> signifie "right" (droite).</p>
+<p>Les 7 premiers caractères seront soit <code>F</code> ou <code>B</code>. Ceux-ci désignent exactement l'une des <em>128 lignes</em> de l'avion (numérotées de <code>0</code> à <code>127</code>). Chaque lettre vous montre dans quelle moitié de la région se trouve le siège en question. Démarrez en considérant toute la liste des lignes : la première lettre indique si le siège est <em>à l'avant</em> (lignes de <code>0</code> à <code>63</code>) ou <em>à l'arrière</em> (lignes de <code>64</code> à <code>127</code>). La lettre suivante indique dans quelle moitié de la région retenue se trouve le siège, et ainsi de suite jusqu'à ce que vous vous retrouviez avec une seule ligne.</p>
+<p>Par exemple, prenez les sept premiers caractères de <code>FBFBBFFRLR</code> :</p>
+<ul>
+<li>Démarrez en considérant la totalité des lignes de <code>0</code> à <code>127</code>.</li>
+<li><code>F</code> indique qu'il faut prendre la <em>moitié basse</em>, gardant les lignes de <code>0</code> à <code>63</code>.</li>
+<li><code>B</code> indique qu'il faut prendre la <em>moitié haute</em>, gardant les lignes de <code>32</code> à <code>63</code>.</li>
+<li><code>F</code> indique qu'il faut prendre la <em>moitié basse</em>, gardant les lignes de <code>32</code> à <code>47</code>.</li>
+<li><code>B</code> indique qu'il faut prendre la <em>moitié haute</em>, gardant les lignes de <code>40</code> à <code>47</code>.</li>
+<li><code>B</code> garde les lignes de <code>44</code> à <code>47</code>.</li>
+<li><code>F</code> garde les lignes de <code>44</code> à <code>45</code>.</li>
+<li>Le <code>F</code> final garde la ligne la plus basse des deux, <em>la ligne <code>44</code></em></li>
+</ul>
+<p>Les trois derniers caractères seront soit <code>L</code> soit <code>R</code>. Ceux-ci indiquent exactement l'une des <em>8 colonnes</em> de sièges de l'avion (numérotés de <code>0</code> à <code>7</code>). Le même processus qu'au-dessus s'applique à nouveau, cette fois en seulement trois étapes. <code>L</code> indique qu'il faut garder la <em>moitié basse</em> tandis que <code>R</code> indique qu'il faut garder la <em>moitié haute</em>.</p>
+<p>Par exemple, prenez cette fois les 3 derniers caractères de <code>FBFBBFFRLR</code> :</p>
+<ul>
+<li>Démarrez en considérant la totalité des colonnes de <code>0</code> à <code>7</code>.</li>
+<li><code>R</code> indique qu'il faut garder la <em>moitié haute</em>, gardant les colonnes de <code>4</code> à <code>7</code>.</li>
+<li><code>L</code> indique qu'il faut garder la <em>moitié basse</em>, gardant les colonnes de <code>4</code> à <code>5</code>.</li>
+<li>Le <code>R</code> final garde la plus haute colonne des deux, la <em>colonne <code>5</code></em>.</li>
+</ul>
+<p>Ainsi, décoder <code>FBFBBFFRLR</code> révèle que le siège qu'il désigne se trouve <em>ligne <code>44</code>, colonne <code>5</code></em>.</p>
+<p>Chaque siège possède également un <em>Identificateur de siège</em> (ID) : multipliez sa ligne par 8, puis additionnez-lui la colonne. Dans cet exemple, le siège à pour ID <code>44 * 8 + 5 = <em>357</em></code>.</p>
+<p>Voici quelques autres billets d'embarquement :</p>
+<ul>
+<li><code>BFFFBBFRRR</code> : ligne <code>70</code>, colonne <code>7</code>, ID <code>567</code>.</li>
+<li><code>FFFBBBFRRR</code> : ligne <code>14</code>, colonne <code>7</code>, ID <code>119</code>.</li>
+<li><code>BBFFBBFRLL</code> : ligne <code>102</code>, colonne <code>4</code>, ID <code>820</code>.</li>
+</ul>
+<p>Pour vérifier que vos données sont bonnes, vérifiez vote liste de billets d'embarquement. <em>Quel est le plus grand ID sur un billet d'embarquement ?</em></p>
+</section> 
+<section id='translation_part_two'> 
+<h2 id="partie-deux----">--- Partie Deux ---</h2>
+<p><em>Ding !</em> Le panneau "attachez vos ceintures" vient de s'allumer. Il est grand temps de trouver votre siège.</p>
+<p>C'est un vol complet, alors votre siège devrait être le seul manquant dans votre liste de billets d'embarquements. Cependant, il y a un hic : certain des sièges tout à l'avant et à l'arrière de l'avion n'existent pas sur cet aéronef, ils manqueront donc également de votre liste.</p>
+<p>Votre siège n'était pas tout au fond ni tout devant, cependant. Les siège d'ID directement supérieur (+1) et inférieur (-1) au vôtre seront donc présents sur votre liste.</p>
+<p><em>Quel est l'ID de votre siège ?</em></p>
+</section> 
+</body> 
+</html> 
